@@ -1,0 +1,40 @@
+{
+  "kind": "collectionType",
+  "collectionName": "lessons",
+  "info": {
+    "name": "lessons",
+    "description": ""
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true,
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "name": {
+      "type": "string",
+      "required": true
+    },
+    "slug": {
+      "type": "uid",
+      "targetField": "name",
+      "required": true
+    },
+    "video": {
+      "type": "text",
+      "required": true
+    },
+    "duration": {
+      "type": "string"
+    },
+    "isPreview": {
+      "type": "boolean",
+      "default": false,
+      "required": true
+    },
+    "course": {
+      "model": "courses"
+    }
+  }
+}
